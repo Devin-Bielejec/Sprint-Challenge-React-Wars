@@ -7,7 +7,7 @@ const Card = styled.section`
 
 
 const CharacterCard = (props) => {
-    const name = props.name;
+    const name = props.character.name;
 
     return(
         <Card>

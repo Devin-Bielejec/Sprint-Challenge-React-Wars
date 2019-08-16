@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from "axios";
+import CharacterList from "./components/CharacterList";
 
 const App = () => {
-  const [characters, setCharacters] = useState();
+  const [characters, setCharacters] = useState([]);
 
   useEffect( () => {
-    const getCharacters = () => {
-      axios
-      .get("https://swapi.co/api/people/")
-      .then(res => {
+    axios
+    .get("https://swapi.co/api/people/")
+    .then(res => {
 
-        console.log(res);
-        setCharacters(res.data.results);
+      console.log(res);
+      setCharacters(res.data.results);
 
-      });
-    }
-
-    getCharacters();
+    });
+    
 
   }, []);
+
+  console.log(characters);
 
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <CharacterList characters={characters} />
     </div>
   );
 }
