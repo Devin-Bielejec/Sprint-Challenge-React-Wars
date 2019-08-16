@@ -23,7 +23,6 @@ const RobotCard = (props) => {
     const eyeColor = props.character["eye_color"];
     const skinColor = props.character["skin_color"];
 
-    //set a default one, getting the other one from Upsplash API
     const [pic, setPic] = useState(false);
 
     useEffect( () => {

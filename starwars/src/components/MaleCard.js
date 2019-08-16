@@ -24,7 +24,6 @@ const MaleCard = (props) => {
     const hairColor = props.character["hair_color"];
     const eyeColor = props.character["eye_color"];
 
-    //set a default one, getting the other one from Upsplash API
     const [pic, setPic] = useState(false);
 
     useEffect( () => {

@@ -19,7 +19,6 @@ const App = () => {
     .get("https://swapi.co/api/people/")
     .then(res => {
 
-      console.log(res);
       setCharacters(res.data.results);
 
     })

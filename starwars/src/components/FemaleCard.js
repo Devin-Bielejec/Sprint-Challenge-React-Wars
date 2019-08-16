@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Card, Img, Title, Description } from "./CharacterCard";
-import femalePic from "../images/female.jpg";
 import axios from "axios";
 
 const Female = styled(Card)`
@@ -30,16 +29,16 @@ const FemaleCard = (props) => {
     const [pic, setPic] = useState(false);
 
     useEffect( () => {
-        axios.get("https://source.unsplash.com/1600x900/?female,face")
+        axios.get("https://source.unsplash.com/1600x900/?female")
         .then(res => setPic(res.request.responseURL))
         .catch(err => console.log(`Error: ${err}`))
     }, [pic])
 
     return(
         <Female>
-            <Img src={pic}></Img>
+            <Img src={pic} alt="A Stunning Woman"></Img>
             <FemaleTitle>{name}</FemaleTitle>
-            <FemaleDescription>{`I am a handsome ${gender} with gorgeous ${hairColor} and beautiful ${eyeColor} eyes.`}</FemaleDescription>
+            <FemaleDescription>{`I am a stunning ${gender} with gorgeous ${hairColor} and beautiful ${eyeColor} eyes.`}</FemaleDescription>
         </Female>
     )
 }

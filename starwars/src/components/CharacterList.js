@@ -10,7 +10,6 @@ const Display = styled.section`
 `
 
 const CharacterList = (props) => {
-    console.log(props.characters);
     const characters = props.characters;
 
     return(
