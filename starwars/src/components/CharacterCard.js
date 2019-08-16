@@ -21,4 +21,11 @@ const Title = styled.h1`
     margin: 0;
 `
 
-export { Card, Img, Title };
+const Description = styled.p`
+    text-align: center;
+    font-size: 2rem;
+    width: 50%;
+    margin: 0 auto;
+`
+
+export { Card, Img, Title, Description };

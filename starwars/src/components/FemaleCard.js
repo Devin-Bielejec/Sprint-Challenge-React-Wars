@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Card, Img, Title } from "./CharacterCard";
+import { Card, Img, Title, Description } from "./CharacterCard";
 import femalePic from "../images/female.jpg";
 import axios from "axios";
 
@@ -14,6 +14,10 @@ const FemaleTitle = styled(Title)`
     font-family: cursive;
 `
 
+const FemaleDescription = styled(Description)`
+    font-family: cursive;
+    line-height: 2;
+`
 
 
 const FemaleCard = (props) => {
@@ -35,8 +39,7 @@ const FemaleCard = (props) => {
         <Female>
             <Img src={pic}></Img>
             <FemaleTitle>{name}</FemaleTitle>
-            <h3>{`I am a handsome ${gender} with gorgeous ${hairColor} and beautiful ${eyeColor} eyes.`}</h3>
-            <p></p>
+            <FemaleDescription>{`I am a handsome ${gender} with gorgeous ${hairColor} and beautiful ${eyeColor} eyes.`}</FemaleDescription>
         </Female>
     )
 }

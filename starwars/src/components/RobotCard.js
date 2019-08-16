@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Card, Img, Title } from "./CharacterCard";
+import { Card, Img, Title, Description } from "./CharacterCard";
 import axios from "axios";
 
 const Robot = styled(Card)`
@@ -9,7 +9,13 @@ const Robot = styled(Card)`
 `
 
 const RobotTitle = styled(Title)`
-    text-transform: captilize;
+    text-transform: uppercase;
+`
+
+const RobotDescription = styled(Description)`
+    text-transform: uppercase; 
+    width: 80%;
+    font-size: 1.5rem;
 `
 
 const RobotCard = (props) => {
@@ -32,8 +38,7 @@ const RobotCard = (props) => {
                 <Img src={pic}></Img>
             </div>
             <RobotTitle>{name}</RobotTitle>
-            <h3>{`I am a handsome robot with gorgeous ${skinColor} metal and beautiful ${eyeColor} eyes.`}</h3>
-            <p></p>
+            <RobotDescription>{`I am a handsome robot with gorgeous ${skinColor} metal and beautiful ${eyeColor} eyes.`}</RobotDescription>
         </Robot>
     )
 }

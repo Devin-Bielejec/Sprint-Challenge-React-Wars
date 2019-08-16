@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Card, Img, Title } from "./CharacterCard";
+import { Card, Img, Title, Description } from "./CharacterCard";
 import axios from "axios";
 
 const Male = styled(Card)`
@@ -12,6 +12,10 @@ const Male = styled(Card)`
 const MaleTitle = styled(Title)`
     text-align: left;
     font-family: bold;
+`
+const MaleDescription = styled(Description)`
+    line-height: 1.2;
+    color: blue;
 `
 
 const MaleCard = (props) => {
@@ -35,8 +39,7 @@ const MaleCard = (props) => {
                 <Img src={pic}></Img>
             </div>
             <MaleTitle>{name}</MaleTitle>
-            <h3>{`I am a handsome ${gender} with gorgeous ${hairColor} and beautiful ${eyeColor} eyes.`}</h3>
-            <p></p>
+            <MaleDescription>{`I am a handsome ${gender} with gorgeous ${hairColor} and beautiful ${eyeColor} eyes.`}</MaleDescription>
         </Male>
     )
 }
