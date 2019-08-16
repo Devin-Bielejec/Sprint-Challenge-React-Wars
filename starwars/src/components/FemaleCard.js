@@ -26,13 +26,15 @@ const FemaleCard = (props) => {
     const eyeColor = props.character["eye_color"];
 
     //set a default one, getting the other one from Upsplash API
-    const [pic, setPic] = useState(false);
+    const [pic, setPic] = useState("false");
 
     useEffect( () => {
-        axios.get("https://source.unsplash.com/1600x900/?female")
-        .then(res => setPic(res.request.responseURL))
+        axios.get(`https://source.unsplash.com/1600x900/?female`)
+        .then(res => {
+            setPic(res.request.responseURL);
+        })
         .catch(err => console.log(`Error: ${err}`))
-    }, [pic])
+    }, [])
 
     return(
         <Female>
