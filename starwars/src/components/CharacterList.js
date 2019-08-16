@@ -1,5 +1,5 @@
 import React from "react";
-import { CharacterCard } from "./CharacterCard";
+import { FemaleCard } from "./FemaleCard";
 
 const CharacterList = (props) => {
     console.log(props.characters);
@@ -7,11 +7,18 @@ const CharacterList = (props) => {
 
     return(
         <div>
-            {characters.map( (char) => {
-                return <CharacterCard character={char}/>
+            {characters.map( (character) => {
+                if (props.character.gender === "male"){
+                    return <MaleCard character={character}/>
+                } else if (props.character.gender  === "female") {
+                    return <FemaleCard character={character}/>
+                } else {
+                    return <Robot character={character}/>
+                }
+                
             })}
         </div>
     )
 }
 
-export default CharacterList;
+export { CharacterList };

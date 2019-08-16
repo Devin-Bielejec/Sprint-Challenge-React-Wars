@@ -13,21 +13,4 @@ const Card = styled.section`
 }
 `
 
-
-const CharacterCard = (props) => {
-    const name = props.character.name;
-    console.log(props.character);
-
-    return(
-        <Card gender={props.character.gender} name={name}>
-            <div>
-                <img src={}></img>
-            </div>
-            <h1>{name}</h1>
-            <h3>{`I am a handsome ${props.character.gender} with gorgeous ${props.character["hair_color"]} and beautiful ${props.character["eye_color"]} eyes.`}</h3>
-            <p></p>
-        </Card>
-    )
-}
-
-export { CharacterCard, Card };
+export { Card };
