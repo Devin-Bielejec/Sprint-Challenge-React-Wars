@@ -9,6 +9,11 @@ const Card = styled.section`
     margin: 2% auto;
     padding: 2%;
     background: white;
+
+    &:hover{
+        width: 50%;
+        height: 30%;
+    }
 `
 const Img = styled.img`
     width: 100%;
