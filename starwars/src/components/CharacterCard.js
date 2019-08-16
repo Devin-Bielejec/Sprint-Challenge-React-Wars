@@ -4,13 +4,13 @@ import styled from "styled-components";
 const Card = styled.section`
     border: 2px solid white;
 
-    width: 50%;
+    width: 10%;
+    height: 10%;
     margin: 2% auto;
-
-    ${props => (props.gender === "male") ? `color: black` : null}
-    ${props => (props.gender === "female") ? `color: red` : null}
-    ${props => (props.gender === "n/a") ? `color: brown` : null}
-}
+`
+const Img = styled.img`
+    width: 100%;
+    height: auto;
 `
 
-export { Card };
+export { Card, Img };

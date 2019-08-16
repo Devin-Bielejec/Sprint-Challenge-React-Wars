@@ -1,5 +1,7 @@
 import React from "react";
 import { FemaleCard } from "./FemaleCard";
+import { MaleCard } from "./MaleCard";
+import { RobotCard } from "./RobotCard";
 
 const CharacterList = (props) => {
     console.log(props.characters);
@@ -8,12 +10,12 @@ const CharacterList = (props) => {
     return(
         <div>
             {characters.map( (character) => {
-                if (props.character.gender === "male"){
+                if (character.gender === "male"){
                     return <MaleCard character={character}/>
-                } else if (props.character.gender  === "female") {
+                } else if (character.gender  === "female") {
                     return <FemaleCard character={character}/>
                 } else {
-                    return <Robot character={character}/>
+                    return <RobotCard character={character}/>
                 }
                 
             })}
