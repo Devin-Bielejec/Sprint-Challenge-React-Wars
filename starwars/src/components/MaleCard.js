@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Card, Img } from "./CharacterCard";
+import { Card, Img, Title } from "./CharacterCard";
 import axios from "axios";
 
 const Male = styled(Card)`
     color: black;
+    border: 3px solid black;
+    box-shadow: 20px 20px;
+`
+
+const MaleTitle = styled(Title)`
+    text-align: left;
+    font-family: bold;
 `
 
 const MaleCard = (props) => {
@@ -24,10 +31,10 @@ const MaleCard = (props) => {
 
     return(
         <Male>
-            <div className="image">
+            <div className="image" alt="A Beautiful Man">
                 <Img src={pic}></Img>
             </div>
-            <h1>{name}</h1>
+            <MaleTitle>{name}</MaleTitle>
             <h3>{`I am a handsome ${gender} with gorgeous ${hairColor} and beautiful ${eyeColor} eyes.`}</h3>
             <p></p>
         </Male>

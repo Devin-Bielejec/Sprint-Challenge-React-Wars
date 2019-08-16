@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Card, Img } from "./CharacterCard";
+import { Card, Img, Title } from "./CharacterCard";
 import femalePic from "../images/female.jpg";
 import axios from "axios";
 
 const Female = styled(Card)`
     color: red;
+    border-radius: 75px;
+    border: 1px dashed red;
+    box-shadow: -10px -10px;
+`
+const FemaleTitle = styled(Title)`
+    font-family: cursive;
 `
 
 
@@ -28,7 +34,7 @@ const FemaleCard = (props) => {
     return(
         <Female>
             <Img src={pic}></Img>
-            <h1>{name}</h1>
+            <FemaleTitle>{name}</FemaleTitle>
             <h3>{`I am a handsome ${gender} with gorgeous ${hairColor} and beautiful ${eyeColor} eyes.`}</h3>
             <p></p>
         </Female>
